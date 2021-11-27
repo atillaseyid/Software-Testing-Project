@@ -17,7 +17,7 @@ public class SearchStepDefs extends AbstractStepDefs {
     public void CartLinkSelected(){
         HomePage.GetSearchButton().click();
     }
-    @Then("{string} search error msg shown")
+    @Then("{string} search error message shown")
     public void SearchErrorMessageIsShown(String msg){
         Optional<String> ErrorMessage = HomePage.GetSearchError();
         if(ErrorMessage.isPresent())
