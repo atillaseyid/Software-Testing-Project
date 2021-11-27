@@ -10,7 +10,7 @@ import static org.junit.Assert.fail;
 
 public class SigInStepDefs extends AbstractStepDefs{
 
-    @Given("{string is filled with {string}")
+    @Given("{string} is filled with {string}")
     public void FieldIsFilledWithParameter(String field,String parameter){
         HomePage.FillField(field,parameter);
     }
