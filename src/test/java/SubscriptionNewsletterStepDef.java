@@ -1,5 +1,6 @@
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 import java.util.Optional;
@@ -12,8 +13,12 @@ public class SubscriptionNewsletterStepDef extends AbstractStepDefs{
     public void NewsletterSubscriptionFilled(String field, String parameter){
         HomePage.FillField(field, parameter);
     }
+    @When("Newsletter button clicked")
+    public void NewsletterButtonClicked(){
+        HomePage.GetNewsletterButton().click();
+    }
 
-    @Then("{string} error message is shown")
+    @Then("{string} message is shown")
     public void NewsletterErrorMsg(String error_msg){
         Optional<String> ErrorMessage = HomePage.GetNewsletterError();
         if (ErrorMessage.isPresent())
