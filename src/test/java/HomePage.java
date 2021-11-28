@@ -19,6 +19,7 @@ public class HomePage {
     private static final By CART_ERROR = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[1]/p[1]");
     private static final By CREATE_ACCOUNT_ERROR = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/ol[1]/li[1]");
     private static final By NEWSLETTER_ERROR = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/p[1]");
+    private static final By ContacUs_Result = By.xpath("/html/body/div/div[2]/div/div[3]/div/p");
 
     @FindBy(className = "login")
     private WebElement SignInLink;
@@ -100,6 +101,7 @@ public class HomePage {
     public Optional<String> GetNewsletterError() {
         return GetErrorMessage(NEWSLETTER_ERROR);
     }
+    public Optional<String> GetContactUsResult(){ return GetErrorMessage(ContacUs_Result);}
 
 
 

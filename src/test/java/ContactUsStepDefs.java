@@ -32,6 +32,16 @@ public class ContactUsStepDefs extends AbstractStepDefs{
             fail();
     }
 
+    @Then("{string} ContactUs message is shown")
+    public void ContactUsMsgSend(String result_msg){
+        Optional<String> ResultMessage = HomePage.GetContactUsResult();
+        if(ResultMessage.isPresent()){
+            Assert.assertEquals(result_msg, ResultMessage.get());
+        }
+        else
+            fail();
+    }
+
 
 
 
